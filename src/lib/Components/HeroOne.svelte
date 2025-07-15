@@ -16,8 +16,8 @@
 
 		// Bottom curve during lift up the 1st section
 		tl.to('.first-hero', {
-			borderBottomLeftRadius: '999px',
-			borderBottomRightRadius: '999px',
+			borderBottomLeftRadius: '399px',
+			borderBottomRightRadius: '399px',
 			duration: 0.6,
 			ease: 'power3.out'
 		});
