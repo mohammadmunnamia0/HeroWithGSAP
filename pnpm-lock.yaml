@@ -11,6 +11,12 @@ importers:
       gsap:
         specifier: ^3.13.0
         version: 3.13.0
+      react-icons:
+        specifier: ^5.5.0
+        version: 5.5.0(react@19.1.0)
+      svelte-icons:
+        specifier: ^2.1.0
+        version: 2.1.0
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.5
@@ -1245,6 +1251,15 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
+  react-icons@5.5.0:
+    resolution: {integrity: sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==}
+    peerDependencies:
+      react: '*'
+
+  react@19.1.0:
+    resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
+    engines: {node: '>=0.10.0'}
+
   readdirp@4.1.2:
     resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
     engines: {node: '>= 14.18.0'}
@@ -1317,6 +1332,9 @@ packages:
     peerDependenciesMeta:
       svelte:
         optional: true
+
+  svelte-icons@2.1.0:
+    resolution: {integrity: sha512-rHPQjweEc9fGSnvM0/4gA3pDHwyZyYsC5KhttCZRhSMJfLttJST5Uq0B16Czhw+HQ+HbSOk8kLigMlPs7gZtfg==}
 
   svelte@5.35.7:
     resolution: {integrity: sha512-J3DeZKCWXyHodN6kpXHgIpXz1HkVAC2PbnlBGDfT7Y8kUMkklzI4n7mohjUR0x1AGPX8NEzAfdUaRHglegxQXw==}
@@ -2417,6 +2435,12 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
+  react-icons@5.5.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+
+  react@19.1.0: {}
+
   readdirp@4.1.2: {}
 
   resolve-from@4.0.0: {}
@@ -2503,6 +2527,8 @@ snapshots:
       postcss-selector-parser: 7.1.0
     optionalDependencies:
       svelte: 5.35.7
+
+  svelte-icons@2.1.0: {}
 
   svelte@5.35.7:
     dependencies:

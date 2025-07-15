@@ -20,7 +20,7 @@
 </script>
 
 <section
-	class="relative flex min-h-screen flex-col justify-center bg-gradient-to-br from-black via-black to-violet-900 px-8 text-white"
+	class="relative flex min-h-[91vh] flex-col justify-center bg-gradient-to-tr from-black via-black to-violet-900 px-2 text-white p-4"
 >
 	<div class="max-w-6xl">
 		<div class="space-y-4">

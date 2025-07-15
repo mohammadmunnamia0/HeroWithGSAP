@@ -1,14 +1,16 @@
 <script lang="ts">
-  import HeroOne from './HeroOne.svelte';
-  import HeroTwo from './HeroTwo.svelte';
+	import Navbar from './common/Navbar.svelte';
+	import HeroOne from './HeroOne.svelte';
+	import HeroTwo from './HeroTwo.svelte';
 
-let isFirstDone = false;
-
-
+	let isFirstDone = false;
 </script>
 
-{#if !isFirstDone}
-  <HeroOne onDone={() => (isFirstDone = true)} />
-{:else}
-  <HeroTwo />
-{/if}
+<section >
+	{#if !isFirstDone}
+		<HeroOne onDone={() => (isFirstDone = true)} />
+	{:else}
+		<Navbar />
+		<HeroTwo/>
+	{/if}
+</section>
