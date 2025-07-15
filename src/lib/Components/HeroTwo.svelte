@@ -1,23 +1,46 @@
-<script lang="ts">
-  import { onMount } from 'svelte';
-  import gsap from 'gsap';
 
-  onMount(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(".title", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power2.out" })
-      .fromTo(".button", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, "+=0.3")
-      .fromTo(".text", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, "+=0.3");
-  });
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import gsap from 'gsap';
+
+	onMount(() => {
+		const transition = gsap.timeline();
+
+		transition.fromTo(
+			'.line',
+			{ y: 50, opacity: 0 },
+			{ y: 0, opacity: 1, duration: 0.4, stagger: 0.15, ease: 'power2.out' }
+		)
+			.fromTo('.button', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4 }, '+=0.2')
+			.fromTo('.text', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3 }, '+=0.2');
+	});
+
+	const heroTitleClass =
+		'line text-[60px] leading-[1.1] font-extrabold opacity-0 md:text-[70px] lg:text-[90px]';
 </script>
 
-<section class="second-hero grid grid-cols-1 md:grid-cols-2 gap-6 p-12 bg-white text-gray-800 min-h-screen">
-  <div class="flex flex-col gap-4">
-    <h1 class="text-4xl font-bold opacity-0 title">Welcome to Hero Section 2</h1>
-    <button class="bg-blue-600 text-white py-2 px-4 rounded opacity-0 button">Click Me</button>
-  </div>
-  <div class="opacity-0 text">
-    <p>
-      This is a paragraph with some detailed content about the hero section. It appears after the title and button.
-    </p>
-  </div>
+<section
+	class="relative flex min-h-screen flex-col justify-center bg-gradient-to-br from-black via-black to-violet-900 px-8 text-white"
+>
+	<div class="max-w-6xl">
+		<div class="space-y-4">
+			<h1 class={heroTitleClass}>Everything you need to</h1>
+			<h1 class={heroTitleClass}>
+				make a <span class="text-violet-500">Difference</span>
+			</h1>
+		</div>
+
+		<button
+			class="button mt-10 rounded-full border border-white px-10 py-5 text-lg font-medium opacity-0 transition-all duration-200 hover:bg-white hover:text-black"
+		>
+			Explore Us
+		</button>
+	</div>
+
+	<div class="text absolute right-8 bottom-8 max-w-sm text-xl text-gray-200 opacity-0">
+		<p>
+			Our skilled team uses the latest tools and techniques to deliver memorable brand identities
+			and digital experiences.
+		</p>
+	</div>
 </section>

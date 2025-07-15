@@ -2,15 +2,13 @@
   import HeroOne from './HeroOne.svelte';
   import HeroTwo from './HeroTwo.svelte';
 
-  let showSecondHero = false;
+let isFirstDone = false;
 
-  function handleDone() {
-    showSecondHero = true;
-  }
+
 </script>
 
-{#if !showSecondHero}
-  <HeroOne on:done={handleDone} />
+{#if !isFirstDone}
+  <HeroOne onDone={() => (isFirstDone = true)} />
 {:else}
   <HeroTwo />
 {/if}
